@@ -1,0 +1,32 @@
+/*code couleur temporaire*/
+.color-primary-0 { color: #1E1E1E }	/* Main Primary color */
+.color-primary-1 { color: #908E8E }
+.color-primary-2 { color: #5B5B5B }
+.color-primary-3 { color: #000000 }
+.color-primary-4 { color: #030202 }
+
+*{
+    margin 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    /*background-color: black;*/
+}
+
+header{
+    background-color: #1E1E1E;
+    color: #908E8E;
+}
+
+footer{
+    background-color: #1E1E1E;
+    color: #908E8E;
+    bottom: 0px;
+}

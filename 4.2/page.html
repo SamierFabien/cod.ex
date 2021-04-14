@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"  href="../style.css">
+    <title>Exercice 4.2</title>
+</head>
+<body>
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 text-align-center">
+                <h1>[Cod.Ex.]</h1>
+                <p>
+                    
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+                <h1>Exercices corrigés</h1>
+                <p>
+                    
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!--Conteneur principal-->
+    <div class="container-fluid mainContainer">
+        <div class="container m-3 p-3">
+            <h2>Enoncé de l'exercice</h2>
+            <p>
+                Cet algorithme est destiné à prédire l'avenir, et il doit être infaillible !
+                Il lira au clavier l’heure et les minutes, et il affichera l’heure qu’il sera une minute plus tard. Par
+                exemple, si l'utilisateur tape 21 puis 32, l'algorithme doit répondre :
+                "Dans une minute, il sera 21 heure(s) 33".
+                NB : on suppose que l'utilisateur entre une heure valide. Pas besoin donc de la vérifier.
+            </p>
+            <p class="text-center">
+                <button type="button" class="btn btn-dark" onClick="run()">Lancer le code</button>
+            </p>
+            
+        </div>
+        <!--Affichage du résultat du code javascript-->
+        <div class="container m-3 p-3">
+            <h2>Résultat de l'exercice</h2>
+            <p id="result">
+
+            </p>
+        </div>
+        <div class="container m-3 p-3">
+            <h2>Code</h2>
+            <p>
+                <pre id="code">
+                    <!--PLACER ICI LE CODE JS-->
+var heures = prompt("Veuillez saisir l'heure :");
+var minutes = prompt("Veuillez saisir les minutes :");
+
+if (minutes < 59) {
+    minutes++;
+} else {
+    if (heures < 23) {
+        heures++;
+        minutes = 0;
+    } else {
+        heures = 0;
+        minutes = 0;
+    }
+}
+
+alert("Dans une minute, il sera : "+heures+"h"+minutes+".");
+setResult("Dans une minute, il sera : "+heures+"h"+minutes+".");//ne pas tenir compte de cette ligne
+                    <!--PLACER ICI LE CODE JS-->
+                </pre>
+            </p>
+        </div>
+    </div>
+
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 p-4">
+                <p>
+                    Réalisé par Samier Fabien.
+                </p>
+                <p>
+                    Développeur d'applications.
+                </p>
+                <p>
+                    samier.fabien84@gmail.com
+                </p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 p-4">
+                <p>
+                    Tout le contenu est sous licence libre.
+                </p>
+                <p>
+                    Peut être partagé, distribué, modifié gratuitement.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../main.js"></script>
+</body>
+</html>
